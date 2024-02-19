@@ -110,11 +110,11 @@ const Thumb: React.FC<{ file: File }> = ({ file }) => {
     const reader = new FileReader();
 
     reader.onloadend = () => {
-      if (imgRef && imgRef.current != null) {
-        imgRef.current.src = reader.result?.toString() || "";
+      if (imgRef?.current != null) {
+        imgRef.current.src = reader.result?.toString() ?? "";
       }
     };
-    if (imgRef && imgRef.current != null) {
+    if (imgRef?.current != null) {
       imgRef.current.onload = detectFaces;
     }
 

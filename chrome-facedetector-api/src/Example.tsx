@@ -15,7 +15,7 @@ const Example: React.FC = () => {
   const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const uploadedFiles = Array.from(event.target.files ?? []).filter(
       (file) => {
-        const ext = file.name.split(".").pop() || "";
+        const ext = file.name.split(".").pop() ?? "";
         return SUPPORTED.includes(ext);
       }
     );
@@ -30,8 +30,8 @@ const Example: React.FC = () => {
       <hr />
 
       <Files>
-        {files.map((file, index) => (
-          <Thumb key={`thumb-${index}`} file={file} />
+        {files.map((file) => (
+          <Thumb key={`thumb-${file.name}`} file={file} />
         ))}
       </Files>
     </div>

@@ -19,8 +19,6 @@ const Instructions: React.FC = () => (
       the bottom of the screen.
     </h3>
 
-    <img alt="example" src="/1.png" />
-
     <h3>Relaunch the browser please.</h3>
   </div>
 );

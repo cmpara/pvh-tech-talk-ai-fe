@@ -23,14 +23,14 @@ const Inner = styled.div`
 `;
 
 const App: React.FC = () => {
-  const [isEnabled, setEnabled] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(false);
 
   useEffect(() => {
     if (typeof window.FaceDetector === "undefined") {
       return;
     }
 
-    setEnabled(true);
+    setIsEnabled(true);
   }, []);
 
   return (
